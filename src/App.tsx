@@ -31,10 +31,10 @@ function App() {
                 src="/profil.jpg" 
                 alt="Emine Betül Demircan'ın profil fotoğrafı" 
               />
-              <figcaption>Emine Betül Demircan</figcaption>
+             
             </figure>
             <div className="about-content">
-              <p>Merhaba! Ben Emine Betül Demircan. Web ve mobil uygulama geliştirme ile ilgileniyorum. Full-stack geliştirme konusunda kendimi geliştiriyorum.</p>
+              <p>Merhaba! Ben Emine Betül Demircan. Web ve mobil uygulama geliştirme ile aktif olarak ilgileniyorum. Şu anda full-stack geliştirme konusunda kendimi geliştirerek hem front-end hem de back-end teknolojilerinde yetkinlik kazanmaya çalışıyorum.</p>
               
               <div className="tech-stack">
                 <h3>Kullandığım Teknolojiler</h3>
@@ -137,6 +137,35 @@ function App() {
                 </ul>
               </div>
             </article>
+            
+    {/* Authentication Sistemi */}
+    <article className="project-card">
+      <div className="project-header">
+        <h3>ASP.NET Core Authentication Sistemi</h3>
+        <span className="project-tech">ASP.NET Core</span>
+      </div>
+      <p>ASP.NET Core ile geliştirilmiş kapsamlı kimlik doğrulama (Authentication) ve yetkilendirme (Authorization) sistemi.</p>
+      <div className="project-details">
+        <h4>Kullanılan Teknolojiler:</h4>
+        <ul>
+          <li>ASP.NET Core Identity</li>
+          <li>JWT (JSON Web Token)</li>
+          <li>Entity Framework Core</li>
+          <li>SQL Server</li>
+        </ul>
+      </div>
+      <div className="project-modules">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Kullanıcı kayıt ve giriş işlemleri</li>
+          <li>JWT token tabanlı authentication</li>
+          <li>Role-based authorization</li>
+          <li>Email doğrulama</li>
+          <li>Şifre sıfırlama</li>
+          <li>Refresh token mekanizması</li>
+        </ul>
+      </div>
+    </article>
 
             {/* Blog Uygulaması */}
             <article className="project-card">
@@ -228,7 +257,7 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2025 Emine Betül Demircan. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 Emine Betül Demircan. Tüm hakları saklıdır.</p>
       </footer>
     </>
   );
