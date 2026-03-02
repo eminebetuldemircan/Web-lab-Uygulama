@@ -25,49 +25,137 @@ function App() {
         {/* Hakkımda Bölümü */}
         <section id="hakkimda">
           <h2>Hakkımda</h2>
-          <figure>
-            <img 
-              src="/profil.jpg" 
-              alt="Emine Betül Demircan'ın profil fotoğrafı" 
-              style={{maxWidth: '200px', borderRadius: '50%'}}
-            />
-            <figcaption>Emine Betül Demircan</figcaption>
-          </figure>
-          <p>Merhaba! Ben Emine Betül Demircan. Web geliştirme ile ilgileniyorum.</p>
-          
-          <h3>Kullandığım Teknolojiler</h3>
-          <ul>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>HTML5 & CSS3</li>
-          </ul>
+          <div className="about-container">
+            <figure className="profile-figure">
+              <img 
+                src="/profil.jpg" 
+                alt="Emine Betül Demircan'ın profil fotoğrafı" 
+              />
+              <figcaption>Emine Betül Demircan</figcaption>
+            </figure>
+            <div className="about-content">
+              <p>Merhaba! Ben Emine Betül Demircan. Web ve mobil uygulama geliştirme ile ilgileniyorum. Full-stack geliştirme konusunda kendimi geliştiriyorum.</p>
+              
+              <div className="tech-stack">
+                <h3>Kullandığım Teknolojiler</h3>
+                <ul className="tech-list">
+                  <li>React.js</li>
+                  <li>TypeScript</li>
+                  <li>Node.js</li>
+                  <li>C# & ASP.NET Core</li>
+                  <li>SQL Server</li>
+                  <li>Entity Framework Core</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Projeler Bölümü */}
         <section id="projeler">
           <h2>Projelerim</h2>
           
-          <article>
-            <h3>E-Ticaret Sitesi</h3>
-            <img 
-              src="/eticaret.jpg" 
-              alt="E-ticaret sitesi ekran görüntüsü" 
-              style={{maxWidth: '100%', height: 'auto'}}
-            />
-            <p>React ve Node.js ile geliştirilmiş tam yığın e-ticaret uygulaması.</p>
-            <p><strong>Kullanılan teknolojiler:</strong> React, Redux, Node.js, MongoDB</p>
-          </article>
-          
-          <article>
-            <h3>Blog Uygulaması</h3>
-            <img 
-              src="/blog.jpg" 
-              alt="Blog uygulaması ekran görüntüsü" 
-              style={{maxWidth: '100%', height: 'auto'}}
-            />
-            <p>TypeScript ile geliştirilmiş kişisel blog platformu.</p>
-            <p><strong>Kullanılan teknolojiler:</strong> React, TypeScript, Express, PostgreSQL</p>
-          </article>
+          <div className="projects-grid">
+            {/* Restoran Otomasyonu */}
+            <article className="project-card">
+              <div className="project-header">
+                <h3>Restoran Otomasyonu</h3>
+                <span className="project-tech">Java</span>
+              </div>
+              <p>Java ile geliştirilmiş kapsamlı restoran yönetim sistemi. Sipariş takibi, stok yönetimi, masa düzeni ve raporlama özellikleri içerir.</p>
+              <div className="project-details">
+                <h4>Özellikler:</h4>
+                <ul>
+                  <li>Sipariş yönetimi</li>
+                  <li>Stok takibi</li>
+                  <li>Masa düzeni</li>
+                  <li>Raporlama</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* SkinSafe - Cilt Analiz Platformu */}
+            <article className="project-card">
+              <div className="project-header">
+                <h3>SkinSafe</h3>
+                <span className="project-tech">TypeScript & Node.js</span>
+              </div>
+              <p>Cilt analizi yapan mobil platform. Kullanıcıların cilt tiplerini analiz eden ve ürün önerileri sunan yapay zeka destekli uygulama.</p>
+              <div className="project-details">
+                <h4>Özellikler:</h4>
+                <ul>
+                  <li>Cilt analizi</li>
+                  <li>Kişisel ürün önerileri</li>
+                  <li>Takip sistemi</li>
+                  <li>Backend: Node.js</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* E-Ticaret Sitesi */}
+            <article className="project-card">
+              <div className="project-header">
+                <h3>E-Ticaret Platformu</h3>
+                <span className="project-tech">C# & ASP.NET Core</span>
+              </div>
+              <p>ASP.NET Core Web API, Entity Framework Core ve SQL Server ile geliştirilmiş kapsamlı e-ticaret platformu.</p>
+              <div className="project-details">
+                <h4>Kullanılan Teknolojiler:</h4>
+                <ul>
+                  <li>ASP.NET Core Web API</li>
+                  <li>Entity Framework Core</li>
+                  <li>SQL Server</li>
+                  <li>Swagger (API Dokümantasyonu)</li>
+                  <li>Visual Studio 2022</li>
+                </ul>
+              </div>
+              <div className="project-modules">
+                <h4>Geliştirilen Modüller:</h4>
+                <ul>
+                  <li>Admin Panel (Dashboard)</li>
+                  <li>Kullanıcı Mağaza Arayüzü</li>
+                  <li>RESTful API Servisleri</li>
+                  <li>MVC / Razor View</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Online Diş Kliniği Randevu Sistemi */}
+            <article className="project-card">
+              <div className="project-header">
+                <h3>Online Diş Kliniği Randevu Sistemi</h3>
+                <span className="project-tech">React.js</span>
+              </div>
+              <p>React.js ile geliştirilmiş modern ve kullanıcı dostu diş kliniği randevu sistemi.</p>
+              <div className="project-details">
+                <h4>Özellikler:</h4>
+                <ul>
+                  <li>Online randevu alma</li>
+                  <li>Doktor takvimi</li>
+                  <li>Hasta kayıt sistemi</li>
+                  <li>Randevu hatırlatma</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Blog Uygulaması */}
+            <article className="project-card">
+              <div className="project-header">
+                <h3>Blog Uygulaması</h3>
+                <span className="project-tech">TypeScript</span>
+              </div>
+              <p>TypeScript ile geliştirilmiş kişisel blog platformu. Modern ve hızlı bir blog deneyimi sunar.</p>
+              <div className="project-details">
+                <h4>Teknolojiler:</h4>
+                <ul>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Express</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </section>
 
         {/* İletişim Bölümü */}
